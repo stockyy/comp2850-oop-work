@@ -1,5 +1,5 @@
 // Task 5.1.1: anagram checking using a function
-fun Anagrams(first: String, second: String): Boolean {
+fun Anagrams1(first: String, second: String): Boolean {
     if (first.length != second.length) {
         return false
     }
@@ -17,7 +17,7 @@ fun main(argv: Array<String>) {
     else {
         val firstString = argv[0]
         val secondString = argv[1]
-        if (Anagrams(firstString, secondString) == false) {
+        if (Anagrams1(firstString, secondString) == false) {
             println("'$firstString' and '$secondString' are not anagrams")
         }
         else {
