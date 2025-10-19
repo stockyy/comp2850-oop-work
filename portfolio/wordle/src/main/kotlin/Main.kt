@@ -1,6 +1,6 @@
 import kotlin.system.exitProcess
 
-const val MAX_ATTEMPTS = 10
+const val MAX_ATTEMPTS = 6
 
 fun main() {
     // Retrive word list and choose a word
