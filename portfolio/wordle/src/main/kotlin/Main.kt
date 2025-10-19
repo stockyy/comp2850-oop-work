@@ -10,7 +10,7 @@ fun main() {
     println("Feedback Format: \n'?' - letter not in word\n'!' - letter in incorrect position")
     for (i in 1..MAX_ATTEMPTS) {
         val guess = obtainGuess(i)
-        val matches = evaluateGuess(guess, target)
+        val matches = evaluateGuess(guess.lowercase(), target.lowercase())
         displayGuess(guess, matches)
         // winning condition
         if (matches == listOf(1, 1, 1, 1, 1)) {
