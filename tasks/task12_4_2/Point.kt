@@ -2,7 +2,14 @@
 
 import kotlin.math.hypot
 
-class Point(val x: Double, val y: Double) {
+class Point3(val x: Double, val y: Double) {
     fun distance() = hypot(x, y)
-    fun distanceTo(p: Point) = hypot(x - p.x, y - p.y)
+    fun distanceTo(p: Point3) = hypot(x - p.x, y - p.y)
+
+    override fun toString() = "($x, $y)"
+}
+
+fun main() {
+    val point = Point3(7.0, 4.6)
+    println(point)
 }

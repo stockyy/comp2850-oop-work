@@ -2,14 +2,12 @@
 
 import java.time.LocalDate
 
-class Person(var name: String, val birth: LocalDate) {
-    var isMarried = false
-}
+data class Person4(var name: String, val birth: LocalDate, var isMarried: Boolean = false)
 
 fun main() {
     val dateOfBirth = LocalDate.of(1997, 8, 23)
-    val p1 = Person("Dave", dateOfBirth)
-    val p2 = Person("Dave", dateOfBirth)
+    val p1 = Person4("Dave", dateOfBirth)
+    val p2 = Person4("Dave", dateOfBirth)
 
     println("p1 == p1?     : ${p1 == p1}")
     println("p1 == p2?     : ${p1 == p2}")
@@ -20,9 +18,9 @@ fun main() {
     println("p1.toString() : $p1")
     println("p2.toString() : $p2")
 
-    // println("p1 marries")
-    // p1.isMarried = true
-    // println("p1 == p2?     : ${p1 == p2}")
-    // println("p1.hashCode() : %08x".format(p1.hashCode()))
-    // println("p1.toString() : $p1")
+    println("p1 marries")
+    p1.isMarried = true
+    println("p1 == p2?     : ${p1 == p2}")
+    println("p1.hashCode() : %08x".format(p1.hashCode()))
+    println("p1.toString() : $p1")
 }

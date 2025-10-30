@@ -1,6 +1,6 @@
 // Task 10.3.1: example of an explicit null check
 
-fun printReversed(text: String) {
+fun printReversed1(text: String) {
     val result = text.reversed().uppercase()
     println("Result: $result")
 }
@@ -10,5 +10,8 @@ fun main() {
     val input = readLine()
 
     println("Input: $input")
-    printReversed(input)       // replace this line
+    when (input) {
+        null -> println("Result: null")
+        else -> printReversed1(input)
+    }
 }
